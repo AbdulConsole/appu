@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Public Sans", sans-serif;
+      font-size: 32px;
+      background: #1C1C1E;
+      color: #EAEAEA;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 480px;
+      padding: 10px;
+    }
+    .head {
+      width: 100%;
+      height: 60px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      align-items: center;
+      text-align: center;
+    }
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 2 / 6;
+    }
+    .warning {
+      font-size: 14px;
+      text-align: center;
+      color: #4C4C4C;
+    }
+    .card-section {
+      margin-top: 30px;
+    }
+    .info{
+      font-size: 16px;
+      text-align: center;
+    }
+    .card {
+      margin-top: 20px;
+      background: #29292B;
+      width: 100%;
+      border-radius: 10px;
+      min-height: 80px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-content: start;
+      text-align: left;
+      padding: 4px;
+    }
+    .card .icon {
+      grid-area: 1 / 1 / 2 / 2;
+      margin-left: 3px;
+    }
+    .card .msg {
+      grid-area: 1 / 2 / 2 / 6;
+    }
+    .msg {
+      text-align: left;
+    }
+    .msg h2 {
+      font-size: 18px;
+    }
+    .msg p {
+      margin-top: 3px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #4C4C4C;
+    }
+    hr{
+      display: block;
+      border-color: #4C4C4C;
+      opacity: 0.4;
+      margin: 20px 0;
+      border-width: 1px;
+    }
+    .btn {
+      width: 100%;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 20px;
+      border: none;
+      font-size: 22px;
+      letter-spacing: 1;
+      font-weight: 600;
+      background: linear-gradient(90deg, rgba(245,0,95,1) 0%, rgba(255,133,32,1) 100%);
+      color: #EAEAEA;
+    }
+    .verified {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon-circle {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(245,0,95,1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+    .xl {
+      width: 40px;
+      height: 40px;
+    }
+    .icon-circle::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      font-size: 18px;
+      color: #EAEAEA;
+    }
+    .xl::before {
+      content: '\f007';
+      font-weight: 900;
+      font-size: 25px;
+      font-style: bold;
+    }
+    .xl2::before {
+      content: '\f129';
+    }
+    .xl2 {
+      background: #FF9772;
+    }
+    .xl3::before {
+      content: '\f1da';
+    }
+    .xl3 {
+      background: #65CEFE;
+    }
+    .xl4::before {
+      content: '\f555';
+    }
+    .xl4 {
+      background: #FFB76F;
+    }
+    .xl5::before {
+      content: '\f3a5';
+    }
+    .xl5 {
+      background: #413F40;
+    }
+    .xl6::before {
+      content: '\f12a';
+    }
+    .xl6 {
+      background: #FF6666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <section class="head">
+    <p class="div1"><i class="fa-solid fa-angle-left"></i></p>
+    <p class="div2">Account Deletion</p>
+  </section>
+  <p class="warning">
+    If you delete your account, you will not be able to log in with this user ID and all of your information will be permanently removed.
+  </p>
+  <section class="card-section">
+    <p class="info">
+      And you need to agree to delete the following information:
+    </p>
+    <div class="card">
+      <div class="icon">
+        <div class="icon-circle xl"></div>
+      </div>
+      <div class="msg">
+        <h2>Personal Data</h2>
+        <p>Your personal Data include Email address, Nickname will be removed</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <div class="icon-circle xl xl2"></div>
+      </div>
+      <div class="msg">
+        <h2>Third Party Account information</h2>
+        
+      </div>
+    </div>
+    <div class="card">
+       <div class="icon">
+        <div class="icon-circle xl xl3"></div>
+      </div>
+      <div class="msg">
+        <h2>Consumption History, Recharge History, Chapter Unlock History, Series in My List.</h2>
+        
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <div class="icon-circle xl xl4"></div>
+      </div>
+      <div class="msg">
+        <h2>Account Balance</h2>
+        <p>All your coins have been consumed and you can delete your account.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <div class="icon-circle xl xl5"></div>
+      </div>
+      <div class="msg">
+        <h2>VIP Related Benefits</h2>
+        <p>Your account is not currently in VIP status.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <div class="icon-circle xl xl6"></div>
+      </div>
+      <div class="msg">
+        <h2>Please log out of the account on other devices in time, otherwise the App on other devices will be unavailable.</h2>
+      </div>
+    </div>
+    <hr>
+  </section>
+  
+  <section class="footer">
+    <div class="verified">
+      <div class="icon-circle"></div>
+      <p class="info">I accept the deletion risk and agree to delete my account</p>
+    </div>
+  
+    <button class="btn">Delete Account</button>
+  </section>
+  
+  
+  </div>
+</body>
+
+</html>
